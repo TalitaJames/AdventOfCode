@@ -5,13 +5,17 @@ def parse(file):
 
 
 def solve(data):
-    sum=0
-    for i in data:
-        if data[i+2] > data[i+1]:
+    sum = 0
+
+    #FIXME: Prints as 1389, but the answer is 1390, logic error somewhere in the loop
+    for i in range(1,len(data)):
+        
+        if data[i] > data[i-1]:
             sum+=1
+
     
-    print(sum)
-    return str(sum)
+ 
+    return sum
 
 
 
